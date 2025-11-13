@@ -5,7 +5,7 @@ export const API = (path, opts) =>
   }).then(async (r) => {
     if (!r.ok) {
       const text = await r.text();
-      throw new Error(`Ошибка запроса ${r.status}: ${text}`);
+      throw new Error(`Request Error ${r.status}: ${text}`);
     }
     return r.json();
   });
